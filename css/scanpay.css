@@ -1,0 +1,133 @@
+:root {
+  --main-color: #443;
+  --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+  --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+  --border: .2rem solid var(--main-color);
+  --border-hover: .2rem dashed var(--main-color);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  background: url(../image/menu-bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.heading {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: .05rem var(--main-color);
+  letter-spacing: .2rem;
+  text-align: center;
+  pointer-events: none;
+  position: relative;
+  
+}
+
+.heading span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: var(--main-color);
+  font-size: 4rem;
+  text-shadow: -1px 0 var(--main-color), 0 1px var(--main-color), 1px 0 var(--main-color), 0 -1px var(--main-color);
+}
+
+
+#scan-and-pay-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  margin: 100px auto;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+p{
+  color: var(--main-color);
+}
+#payment-status {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #27ae60;
+}
+
+.btn {
+  display: inline-block;
+  padding: .9rem 1.5rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  color: #443;
+  background: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  /* height: 7%;
+  width: 47%; */
+}
+
+.btn:hover {
+  border-radius: var(--border-radius-hover);
+  border: var(--border-hover);
+}
+#qr-code {
+  margin-top: 30px;
+  margin-left: 30%;
+  margin-bottom: 20px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: url(../image/menu-bg.jpg) no-repeat;
+  color: #fff;
+  border-radius: 8px;
+  z-index: 2;
+  text-align: center;
+  width: 400px;
+}
+
+.modal-content {
+  padding: 20px;
+  font-size: 20px;
+}
+
+.close-button {
+  display: inline-block;
+  padding: .9rem 1.5rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  color: #443;
+  background: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  width: 150px;
+}
+.close-btn:hover {
+  border-radius: var(--border-radius-hover);
+  border: var(--border-hover);
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}

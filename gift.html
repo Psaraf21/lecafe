@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gifts and Offers</title>
+    <link rel="icon"  type="image" href="image\coffee-shop_10394208.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css\gift.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    
+  </head>
+  <body>
+    <div>
+      <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="#" class="logo">lecafe <i class="fas fa-mug-hot"></i></a>
+
+        <nav class="navbar">
+          <a href="index.html">home</a>
+          <a href="menu.html">menu</a>
+          <a href="index.html">review</a>
+          <a href="Scan&Pay.html">Scan & Pay</a>
+          <a href="gift.html">Gift</a>
+          <!-- <a href="login.html">login</a> -->
+        </nav>
+
+        <a href="shop_cart.html" class="btn">View Shopping Cart</a>
+      </header>
+
+      <div class="container">
+        <header>
+          <h1 class="hea">
+            <i class="fas fa-mug-hot"></i> Brew Some Delight with Our Gifts
+          </h1>
+          <p>Surprise your loved ones with the perfect coffee gift.</p>
+        </header>
+
+        <div class="gift-section">
+          <h2>Gift Cards</h2>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="Apply Coupon"
+          />
+          <p>
+            Our gift cards are the perfect way to let your friends and family
+            choose their favorite coffee treats.
+          </p>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Gift Card 1 -->
+            <div class="swiper-slide">
+              <div class="gift-card">
+                <div class="gift-card-color">
+                  <img src="card_img\151.png" alt="Diwali Offer" />
+                  <h3>Diwali Offer</h3>
+                </div>
+                <p>Enjoy a variety of coffee options with this versatile gift.</p>
+                <a href="#" class="btn">$20</a>
+              </div>
+            </div>
+      
+            <div class="swiper-slide">
+              <div class="gift-card">
+                <div class="gift-card-color">
+                  <img src="card_img\151.png" alt="Diwali Offer" />
+                  <h3>Diwali Offer</h3>
+                </div>
+                <p>Enjoy a variety of coffee options with this versatile gift.</p>
+                <a href="#" class="btn" onclick="addItem(Gift,20)">$20</a>
+              </div>
+            </div>
+      
+            <!-- Gift Card 2 -->
+            <div class="swiper-slide">
+              <div class="gift-card">
+                <div class="gift-card-color">
+                  <img src="card_img\cafe-icon-png-22.jpg" alt="First Time Offer" style="height: 50px;"/>
+                  <h3>First Time Offer</h3>
+                </div>
+                <p>Delight your loved ones with a more substantial coffee indulgence.</p>
+                <a href="#" class="btn" onclick="addItem(Gift,20)">$25</a>
+              </div>
+            </div>
+      
+            <!-- Gift Card 3 -->
+            <div class="swiper-slide">
+              <div class="gift-card">
+                <div class="gift-card-color">
+                  <img src="card_img\coffee-cup-icon-5.png" alt="Birthday Week" />
+                  <h3>Birthday Week</h3>
+                </div>
+                <p>Spoil your coffee enthusiast with a generous gift card.</p>
+                <a href="#" class="btn" onclick="addItem(Gift,20)">$30</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gift-card">
+                <div class="gift-card-color">
+                  <img src="card_img\coffee-cup-icon-5.png" alt="Birthday Week" />
+                  <h3>Birthday Week</h3>
+                </div>
+                <p>Spoil your coffee enthusiast with a generous gift card.</p>
+                <a href="#" class="btn" onclick="addItem(Gift,20)">$30</a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gift-card">
+                <div class="gift-card-color">
+                  <img src="card_img\coffee-cup-icon-5.png" alt="Birthday Week" />
+                  <h3>Birthday Week</h3>
+                </div>
+                <p>Spoil your coffee enthusiast with a generous gift card.</p>
+                <a href="#" class="btn" onclick="addItem(Gift,20)">$30</a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Add Pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+
+        </div>
+
+
+        <div class="offer-section">
+          <h2>Limited Time Offer</h2>
+          <p>Get a free pastry with every gift card purchase!</p>
+
+          <div class="offer-details">
+            <img src="image\Lovepik_com-611497735-C4D three-dimensional black gold gift box.png" alt="Pastry Image" />
+            <div>
+              <h3>Sweeten the Deal</h3>
+              <p>
+                Pair your gift card with a delicious pastry for an extra treat.
+              </p>
+              <a href="#" class="btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      gsap.from(".container h1", {
+        opacity: 0,
+        duration: 2.5,
+        ease: "back.out(1.7)",
+        y: -250,
+        scrollTrigger: {
+          trigger: "#book",
+          scroller: "body",
+          //    markers:true,
+          start: "top 50%",
+          end: "bottom 20%",
+        },
+      });
+    </script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4,  
+    spaceBetween: 10,
+    direction: 'horizontal',  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+    autoplay: {
+      delay: 1000,  
+    },
+  });
+</script>
+<script src="script.js"></script>
+  </body>
+</html>

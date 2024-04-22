@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menu</title>
+    <link rel="icon"  type="image" href="image\coffee-shop_10394208.png">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- Font Awesome CDN Link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    />
+    <!-- Custom CSS File Link  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mennu.css" />
+  </head>
+  <body>
+    <div>
+      <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="#" class="logo">lecafe <i class="fas fa-mug-hot"></i></a>
+
+        <nav class="navbar">
+          <a href="index.html">home</a>
+          <a href="menu.html">menu</a>
+          <a href="index.html">review</a>
+          <a href="Scan&Pay.html">Scan & Pay</a>
+          <a href="gift.html">Gift</a>
+        </nav>
+        <div> 
+          <a href="view_booking.html" class="btn">View booked table</a>
+          <a href="book.html" class="btn">book a table</a>
+        </div>
+      </header>
+
+      <div class="mennu">
+        <!-- MENU -->
+        <section class="menu" id="menu">
+          <h1 class="heading">our menu <span>popular menu</span></h1>
+
+          <div class="box-container">
+            <a href="#" class="box">
+              <img src="image/menu-1.png" alt="" />
+              <div class="content">
+                <h3>our special coffee</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Tenetur, sed.
+                </p>
+                <span>$8.99</span>
+              </div>
+            </a>
+
+            <a href="#" class="box">
+              <img src="image/menu-2.png" alt="" />
+              <div class="content">
+                <h3>our special coffee</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                  fugit.
+                </p>
+                <span>$8.99</span>
+              </div>
+            </a>
+
+            <a href="#" class="box">
+              <img src="image/menu-3.png" alt="" />
+              <div class="content">
+                <h3>our special coffee</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus, recusandae.
+                </p>
+                <span>$8.99</span>
+              </div>
+            </a>
+
+            <a href="#" class="box">
+              <img src="image/menu-4.png" alt="" />
+              <div class="content">
+                <h3>our special coffee</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Esse, quas.
+                </p>
+                <span>$8.99</span>
+              </div>
+            </a>
+
+            <a href="#" class="box">
+              <img src="image/menu-5.png" alt="" />
+              <div class="content">
+                <h3>our special coffee</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officia, vitae.
+                </p>
+                <span>$8.99</span>
+              </div>
+            </a>
+
+            <a href="#" class="box">
+              <img src="image/menu-6.png" alt="" />
+              <div class="content">
+                <h3>our special coffee</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Unde, expedita!
+                </p>
+                <span>$8.99</span>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      gsap.from("#menu h1", {
+        opacity: 0,
+        duration: 2.5,
+        ease: "back.out(1.7)",
+        y: -250,
+        scrollTrigger: {
+          trigger: "#menu",
+          scroller: "body",
+          //  markers:true,
+          start: "top 50%",
+          end: "bottom 20%",
+        },
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

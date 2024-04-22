@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+:root {
+  --main-color: #443;
+  --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+  --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+  --border: .2rem solid var(--main-color);
+  --border-hover: .2rem dashed var(--main-color);
+}
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.headd{
+  display: inline;
+}
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+
+.hea {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: var(--main-color);
+  -webkit-text-stroke: .05rem var(--main-color);
+  letter-spacing: .2rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+
+/* Container */
+
+.container {
+  width: 100%;
+  margin-top: 5%;
+  /* padding: 30px; */
+}
+
+/* Header */
+
+header {
+  /* background-color: #f2f2f2; */
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  /* background: rgb(60,47,47);
+background: linear-gradient(90deg, rgba(60,47,47,1) 40%, rgba(190,155,123,1) 100%); */
+background: url(../image/menu-bg.jpg) no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+/* header img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+} */
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: Poppins;
+  /* color: #fff; */
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: transparent; */
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
+header p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #727272;
+  /* color: #fff; */
+}
+
+/* Gift section */
+
+.gift-section {
+  margin-top: 3%;
+  margin-bottom: 30px;
+}
+
+.gift-section h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--main-color);
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: -1px 0 var(--main-color), 0 1px var(--main-color), 1px 0 var(--main-color), 0 -1px var(--main-color);
+}
+
+
+
+.gift-section #lname{
+  width: 30%;
+  height: 40px;
+  display: inline-block;
+  padding: .9rem 1.5rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  color: #443;
+  background: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  margin-left: 35%;
+
+}
+
+.gift-section #lname:hover {
+  border-radius: var(--border-radius-hover);
+  border: var(--border-hover);
+}
+
+input[type="text"]::placeholder {
+  text-align: center;
+}
+
+.gift-section p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #727272;
+  margin-bottom: 3%;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+}
+
+/* Gift cards */
+
+.gift-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+.gift-card {
+  width: 300px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  border: var(--border);
+  border-radius: 10px;
+ 
+}
+.gift-card .gift-card-color{
+  /* background: rgb(60,47,47);
+  background: linear-gradient(90deg, rgba(60,47,47,1) 40%, rgba(190,155,123,1) 100%); */
+  background: url(../image/menu-bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30%;
+}
+
+.gift-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gift-card img {
+  margin-top: 30px;
+  width: 17%;
+  height: 70px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.gift-card h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.gift-card p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #727272;
+  margin-bottom: 20px;
+}
+
+
+
+
+.offer-section {
+  margin-bottom: 50px;
+}
+
+.offer-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom:20px;
+
+}
+
+.gift-card .btn {
+  display: inline-block;
+  padding: .9rem 1.5rem;
+  border: var(--border);
+  border-radius:25px;
+  color: #443;
+  background: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  width: 150px;
+}
+
+.gift-card .btn:hover {
+  border-radius: 25px;
+  border: var(--border-hover);
+  background: url(../image/menu-bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.swiper-container {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s; /* Add a transition for smooth scaling */
+}
+
+.gift-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd; /* Add border to create separation between cards */
+  border-radius: 8px; /* Rounded corners for the cards */
+  overflow: hidden; /* Hide overflow to ensure consistent size */
+}
+
+.gift-card:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.gift-card-color {
+  width: 100%;
+  text-align: center;
+  overflow: hidden; /* Hide overflow to ensure consistent size */
+}
+
+
+.offer-section {
+  background-color: #f8f8f8;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  background: url(../image/menu-bg.jpg) no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+.offer-section h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.offer-section p {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.offer-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-details img {
+  width: 200px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.offer-details div {
+  text-align: left;
+}
+
+.offer-details h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.offer-details p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+

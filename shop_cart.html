@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="icon"  type="image" href="image\coffee-shop_10394208.png">
+  <link rel="stylesheet" href="css\shop_cart.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+
+</head>
+<body>
+    <div class="container">
+      <h1>Your Shopping Cart <img src="image\shopping-cart-20392.png" alt="#" style="padding-top: 3px; width: 35px; height: 35px;"></i></h1>
+      
+      <div id="cartItems" class="swiper-container">
+        <div class="swiper-wrapper">
+          
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      
+      <div id="totalAmount">
+        <p>Total Amount: <span id="amountValue">$0</span></p>
+      </div>
+  
+      <button onclick="applyCoupon()">Apply Gift Coupon</button>
+      <div id="discountApplied"></div>
+  
+      <button onclick="calculateTotal()">Calculate Total</button>
+      
+      <div class="referencee"><a href="Scan&Pay.html">Scan & Pay</a></div>
+    </div>
+  
+<!--  
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+  <script src="script.js"></script>
+</body>
+</html>
+

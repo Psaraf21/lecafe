@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a table</title>
+    <link rel="icon"  type="image" href="image\coffee-shop_10394208.png">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- Font Awesome CDN Link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Custom CSS File Link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div >
+      <section class="book" id="book">
+        <h1 class="heading">booking <span>reserve a table</span></h1>
+
+        <form action="/submit-form" method="post">
+          <input type="text" placeholder="Name" name="name" class="box" />
+          <input type="email" placeholder="Email" name="email" class="box" />
+          <input type="number" placeholder="Number" name="number" class="box" />
+          <textarea
+            name="message"
+            placeholder="Message"
+            class="box"
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="send message" class="btn" />
+        </form>
+      </section>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      gsap.from("#book h1", {
+        opacity: 0,
+        duration: 2.5,
+        ease: "back.out(1.7)",
+        y: -250,
+        scrollTrigger: {
+          trigger: "#book",
+          scroller: "body",
+          //    markers:true,
+          start: "top 50%",
+          end: "bottom 20%",
+        },
+      });
+
+      gsap.from("#book form", {
+        opacity: 0,
+        duration: 4,
+        scrollTrigger: {
+          trigger: "#book",
+          scroller: "body",
+          //    markers:true,
+          start: "top 50%",
+          end: "bottom 20%",
+        },
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

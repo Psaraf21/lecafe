@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css\register.css">
+    <link rel="icon"  type="image" href="image\coffee-shop_10394208.png">
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <form
+        action="/register"
+        method="post"
+        onsubmit="return validateRegisterForm()"
+      >
+        <h2>Register</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        />
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+
+    <script>
+      function validateRegisterForm() {
+        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirmPassword").value;
+
+        if (!username || !email || !password || !confirmPassword) {
+          alert("Please fill in all fields.");
+          return false;
+        }
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match.");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!-- public/book.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Bookings</title>
+    <link rel="icon"  type="image" href="image\coffee-shop_10394208.png">
+    <link rel="stylesheet" href="css\view.css" />
+    <!-- <link rel="stylesheet" href="css\style.css"> -->
+  </head>
+  <body>
+    <div>
+      <div class="header">
+        <h1>Bookings</h1>
+      </div>
+      <div class="section">
+        <ul id="bookingsList"></ul>
+      </div>
+      <!-- <h1>Bookings</h1>
+      <ul id="bookingsList"></ul> -->
+    </div>
+
+    <script>
+      // Fetch data from the server
+      fetch("/view-bookings")
+        .then((response) => response.json())
+        .then((data) => {
+          const bookingsList = document.getElementById("bookingsList");
+          // Update the DOM with the fetched data
+          data.bookings.forEach((booking) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `Name: ${booking.name}, Email: ${booking.email}, Number: ${booking.number}, Message: ${booking.message}`;
+            bookingsList.appendChild(listItem);
+          });
+        })
+        .catch((error) => console.error("Error fetching bookings:", error));
+    </script>
+  </body>
+</html>

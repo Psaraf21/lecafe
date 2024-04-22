@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon"  type="image" href="image\coffee-shop_10394208.png">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css\scanpay.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Scan and Pay</title>
+  </head>
+  <body>
+    <div>
+      <header class="header" id="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="#" class="logo">lecafe <i class="fas fa-mug-hot"></i></a>
+        <nav class="navbar">
+          <a href="index.html">home</a>
+          <a href="menu.html">menu</a>
+          <a href="index.html">review</a>
+          <a href="Scan&Pay.html">Scan & Pay</a>
+          <a href="gift.html">Gift</a>
+        </nav>
+
+        <a href="book.html" class="btn">book a table</a>
+      </header>
+
+      <div id="scan-and-pay-container">
+        <h1 class="heading">scan <span>pay</span></h1>
+        <p>
+          Scan the QR code with your payment app to complete the transaction.
+        </p>
+        <div id="qr-code"></div>
+        <button id="scan-button" class="btn" onclick="simulatePayment()">
+          Simulate Payment
+        </button>
+      </div>
+      <div id="payment-popup" class="modal">
+        <div class="modal-content">
+          <p>Thank you for your purchase!</p>
+          <button class="close-button" onclick="closePopup()">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      function generateQRCode() {
+        var qrCodeContainer = document.getElementById("qr-code");
+        var qr = new QRCode(qrCodeContainer, {
+          text: generateRandomCode(),
+          width: 200,
+          height: 200,
+        });
+      }
+
+      function generateRandomCode() {
+        return Math.random().toString(36).substr(2, 8);
+      }
+
+      function simulatePayment() {
+        var popup = document.getElementById("payment-popup");
+        popup.style.display = "block";
+        document.getElementById("scan-and-pay-container").style.filter =
+          "blur(2px)";
+        document.getElementById("payment-popup").style.filter = "none";
+        document.getElementById("header").style.filter =
+          "blur(2px)";
+      }
+
+      function closePopup() {
+        var popup = document.getElementById("payment-popup");
+        popup.style.display = "none";
+        document.getElementById("scan-and-pay-container").style.filter = "none";
+        document.getElementById("header").style.filter =
+          "none";
+      }
+      generateQRCode();
+
+      gsap.from("#scan-and-pay-container h1", {
+        opacity: 0,
+        duration: 2.5,
+        ease: "back.out(1.7)",
+        y: -250,
+        scrollTrigger: {
+          trigger: "#book",
+          scroller: "body",
+          //    markers:true,
+          start: "top 50%",
+          end: "bottom 20%",
+        },
+      });
+    </script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

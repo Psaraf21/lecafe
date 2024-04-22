@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: antiquewhite; */
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #443;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  background: url(../image/home-bg.jpg) no-repeat;
+  /* color: #443; */
+  color: transparent;
+  -webkit-text-stroke: .3rem #443;
+  padding: 2%;
+  border-radius: 8px 8px 0 0;
+  font-size: 40px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.section {
+  padding: 20px;
+}
+
+#bookingsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#bookingsList li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: url(../image/home-bg.jpg) no-repeat;
+  /* border: .2rem solid #443; */
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    margin: 20px;
+  }
+
+  .header {
+    font-size: 32px;
+  }
+
+  #bookingsList li {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .heading {
+      font-size: 6rem;
+  }
+
+  .heading span {
+      font-size: 2.3rem;
+  }
+
+  #menu-btn {
+      display: initial;
+  }
+
+  #menu-btn.fa-times {
+      transform: rotate(180deg);
+  }
+
+  .header .navbar {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .header .navbar a {
+      display: block;
+      font-size: 2.2rem;
+      margin: 0;
+      padding: 1.5rem 2rem;
+  }
+
+}

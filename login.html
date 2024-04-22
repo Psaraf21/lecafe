@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon"  type="image" href="image\coffee-shop_10394208.png">
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="/login" method="post" onsubmit="return validateLoginForm()">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">Login</button>
+        <div class="referencee"><a href="register.html">Register</a></div>
+        
+      </form>
+    </div>
+
+    <script>
+      function validateLoginForm() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (!username || !password) {
+          alert("Please enter both username and password.");
+          return false;
+        }
+
+        return true;
+      }
+
+
+      const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get('error');
+
+    function showAlert(message, type) {
+  const alert = document.createElement('div');
+  alert.textContent = message;
+  alert.classList.add('alert', type);
+  document.body.appendChild(alert);
+
+  // Automatically remove the alert after a certain duration
+  setTimeout(() => {
+    alert.remove();
+  }, 5000); // Adjust the duration as needed
+}
+
+// Example usage
+// showAlert('Username or email is already taken.', 'alert-error');
+// showAlert('Login successful!', 'alert-success');
+// showAlert('Invalid username or password.', 'alert-error');
+
+    </script>
+  </body>
+</html>
